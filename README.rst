@@ -4,6 +4,12 @@ cisco-encrypt
 Password obfuscator for passwords to be stored in VPNC config files, such as
 ``/etc/vpnc/default.conf``.
 
+**IMPORTANT:** Using an obfuscated password does not protect your password if
+someone gets access to your config file!
+
+Obfuscation's only purpose is to make it harder to guess your password by just
+taking a superficial glance at your config file.
+
 
 Build
 ~~~~~
@@ -52,3 +58,5 @@ You can verify the passwords using ``cisco-decrypt``::
 
     $ cisco-decrypt 3822F82D77C7CD8B6B617B54B13183C00A1E4B998D66E3BDA25182A1C1D331EF99B22FCC57C4248688D5926A29FE18D21819FB55E2E35EEF
     myusersecret
+
+**Beware that everyone can do this!**
