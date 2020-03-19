@@ -1,6 +1,6 @@
-CC 		= gcc
-CFLAGS 	= -O3
-LFLAGS  = -lgcrypt
+CC     = gcc
+CFLAGS = $(shell libgcrypt-config --cflags) -O3
+LFLAGS = $(shell libgcrypt-config --libs)
 
 all: cisco-encrypt
 install:
@@ -8,3 +8,6 @@ install:
 
 %: %.c
 	$(CC) -o $@ $< $(CFLAGS) $(LFLAGS)
+
+clean:
+	rm -f cisco-encrypt
