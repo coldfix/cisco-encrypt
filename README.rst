@@ -14,10 +14,10 @@ taking a superficial glance at your config file.
 Build
 ~~~~~
 
-Except for a gcc You will need gcrypt.h from the GNU Cryptographic Library
-Interface. e.g. on ubuntu you could install it with::
+The only dependency other than gcc are the ``libgcrypt`` development files,
+which e.g. on ubuntu can be installed as::
 
-   apt install libgcrypt20-dev
+    apt install libgcrypt20-dev
 
 Build with gcc::
 
