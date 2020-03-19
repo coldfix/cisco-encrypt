@@ -14,6 +14,11 @@ taking a superficial glance at your config file.
 Build
 ~~~~~
 
+Except for a gcc You will need gcrypt.h from the GNU Cryptographic Library
+Interface. e.g. on ubuntu you could install it with::
+
+   apt install libgcrypt20-dev
+
 Build with gcc::
 
     gcc -o cisco-encrypt cisco-encrypt.c -lgcrypt
